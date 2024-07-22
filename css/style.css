@@ -1,0 +1,909 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400&family=Varela+Round&display=swap');
+
+:root{
+
+    --a:0;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+.left {
+    width: 25vw;
+    padding: 9px;
+
+
+}
+
+#ghar{
+    background-color: #1fdf64;
+}
+
+.library {
+    height: 69vh;
+}
+
+
+.right {
+    width: 100%;
+    height: 95vh;
+    padding: 8px;
+    overflow-y: auto;
+    /* Hide scrollbar by default */
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: transparent transparent;
+    /* Firefox */
+    transition: 0.3s ease-out;
+
+    /* WebKit (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 19px;
+    }
+
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+.right:hover {
+    scrollbar-color: grey transparent;
+    /* Change the color to your preference */
+}
+
+/* WebKit (Chrome, Safari) */
+.right:hover::-webkit-scrollbar-thumb {
+    background-color: grey;
+    /* Change the color to your preference */
+}
+
+.home{
+    background-color: #121212;
+    border-radius: 8px;
+    padding:20px;
+
+
+}
+
+
+.home ul li {
+    list-style: none;
+    width: 25px;
+    gap: 14px;
+    display: flex;
+    padding-top: 21px;
+    font-weight: bold;
+}
+
+
+
+.heading {
+    width: 100%;
+    gap: 14px;
+    display: flex;
+    font-weight: bold;
+}
+
+.heading img {
+    width: 22px;
+}
+
+
+.songFolderName{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin:20px 0px 20px;
+    font-size: larger;
+}
+
+
+.content {
+    height: 37vh;
+    margin-top: 50px;
+    width: 23vw;
+    border-radius: 10px;
+    overflow-y: auto;
+    /* Hide scrollbar by default */
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: transparent transparent;
+    /* Firefox */
+    transition: 0.3s ease-out;
+
+    /* WebKit (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 19px;
+    }
+
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+.content:hover {
+    scrollbar-color: grey transparent;
+    /* Change the color to your preference */
+}
+
+/* WebKit (Chrome, Safari) */
+.content:hover::-webkit-scrollbar-thumb {
+    background-color: grey;
+    /* Change the color to your preference */
+}
+
+.content ul {
+    padding: 0px 12px;
+
+}
+
+
+
+
+.info{
+    font-size: small;
+    width: 11vw;
+    height: 3vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: 0.3s ease-out;
+
+}
+
+
+
+
+/*
+.content ul li{
+    list-style-type: decimal;
+    gap: 34px;
+    padding: 12px 0px;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid rgb(144, 145, 144);
+    margin: 12px;
+    padding: 13px;
+    border-radius: 5px;
+    
+}
+*/
+
+
+
+
+.content ul li {
+    list-style-type: decimal;
+    gap: 20px;
+    padding: 12px 0px;
+    justify-content: space-between;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid rgb(144, 145, 144);
+    margin: 12px;
+    padding: 13px;
+    border-radius: 5px;
+
+
+}
+
+.content ul li:hover{
+margin: 10px;
+}
+
+
+
+.close{
+    display: none;
+}
+
+
+.footer {
+    margin-top: 20px;
+    font-size: 11px;
+    bottom: 0;
+    padding: 10px;
+
+
+}
+
+.footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.footer ul li {
+
+    list-style: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgb(151, 149, 149);
+    white-space: nowrap;
+    display: block;
+    padding: 0.5em 0;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: rgb(14, 15, 14);
+    position: sticky;
+    margin-right: 5px;
+    margin-left: 5px;
+    top: 5px;
+    overflow: hidden;
+    z-index: 9999;
+
+}
+
+.nav{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+     
+}
+
+.nav svg {
+    background-color: rgb(60, 61, 61);
+
+}
+
+.hamburger{
+    display: none;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.card {
+
+    width: 150px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #252525;
+    position: relative;
+    transition: all .8ss;
+    
+
+}
+
+.card:hover{
+    background-color: #353434;
+    cursor: pointer;
+    --a:1;
+    
+}
+
+.card>* {
+    padding-top: 9px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#resI{
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+}
+
+#resT{
+    font-size: 15px;
+    height: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+#resD{
+    font-size: 12px;
+    height: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+
+.play {
+
+    width: 20px;
+    height: 20px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    position: absolute;
+    top: 125px;
+    right: 20px;
+    opacity: var(--a);
+    transition: all 0.8s ease-out;
+}
+
+.button {
+    text-align: center;
+}
+
+#login{
+    display: none;
+}
+
+.signinBtn,
+.loginBtn {
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgb(14, 15, 14);
+    color: rgb(244, 240, 240);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.4s ease;
+}
+
+.signinBtn:hover,
+.loginBtn:hover {
+    background-color: #f1f3f5;
+    color: black;
+}
+
+
+
+
+.spaceSeek{
+    padding: 0 12px;
+}
+
+
+.playBar {
+    bottom: 0;
+    height: 10vh;
+    text-align: center;
+    position: sticky;
+    background-color: rgb(14, 15, 14);
+    
+   
+
+}
+.accessSong{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 12px;
+}
+
+
+.seekbar {
+    height: 3.5px;
+    width: 100%;
+    background-color: #252525;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ea610b;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+    transition: left 0.5s ease;
+}
+
+.songTime{
+    font-size: small;
+}
+
+.songsTime2{
+    display: none;
+}
+
+.songName{
+    width: 11vw;
+    height: 3vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: small;
+
+}
+.songButtons{
+    padding: 12px 0;
+}
+
+.footerRight {
+    margin-top: 10vh;
+    gap: 13em;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.footLi {
+    gap: 5em;
+    display: flex;
+}
+
+.company {
+    padding: 10px;
+}
+
+.company ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+
+.company a {
+    text-decoration: none;
+    color: rgb(151, 149, 149);
+    white-space: nowrap;
+    display: block;
+    padding: 0.5em 0;
+}
+
+.company ul li {
+
+    margin-top: 5px;
+
+}
+
+.company a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+.footLogo {
+    padding: 25px;
+    text-align: right;
+}
+
+
+.footLogo ul {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footLogo ul li {
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
+.footLogo ul li:hover {
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(105, 104, 104);
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
+
+
+.cpRight {
+    gap: 2px;
+    font-size: small;
+    color: rgb(151, 149, 149);
+    padding: 30px;
+
+}
+
+.circleNav{
+    
+    border-radius: 50%;
+    background-color: #121212;
+    justify-content: center;
+    padding: 2px;
+    }
+    
+
+    .timevol{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+.volume{
+    display: flex;
+    gap: 20px;
+}
+
+.range input[type="range"]{
+    width: 60px; /* Adjust the width as needed */
+    height: 2px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.volume img{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1000px) {
+   .left{
+    position: fixed;
+    top: 9vh;
+    left: -110%;
+    transition:  0.2s ease-in-out;
+    z-index: 1;
+    width: 100%;
+    padding: 9px;
+    background-color: #0d0d0d;
+   }
+
+
+   .hamburger{
+    display: block;
+    margin-right:20px;
+    cursor: pointer;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+
+}
+.close{
+display: flex;
+margin-right: 5vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: rgb(14, 15, 14);
+    position: sticky;
+    margin-right: 5px;
+    margin-left: 5px;
+    top: 5px;
+    overflow: hidden;
+    z-index: 9999;
+
+}
+
+.info{
+    font-size: small;
+    width: 100%;
+    height: 3vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.button {
+display: none;
+}
+
+.login{
+    display: contents;
+}
+
+   .cardContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+
+    width: 150px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #252525;
+    position: relative;
+
+}
+
+
+
+.card>* {
+    padding-top: 9px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+
+.footerRight {
+    margin-top: 10vh;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+
+.footLi {
+    gap: 5em;
+    display: block;
+    text-align: center;
+    
+    
+
+}
+
+.company {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.company ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+
+.company a {
+    text-decoration: none;
+    color: rgb(151, 149, 149);
+    white-space: nowrap;
+    display: block;
+    padding: 0.5em 0;
+}
+
+.company ul li {
+
+    margin-top: 5px;
+
+}
+
+.company a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+.footLogo {
+    padding: 25px;
+    text-align: right;
+}
+
+
+.footLogo ul {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footLogo ul li {
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
+.footLogo ul li:hover {
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(105, 104, 104);
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
+.songTime{
+    display: none;
+}
+
+.songsTime2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #f1f3f5;
+    height: 50px;
+
+}
+
+
+.cpRight {
+    gap: 2px;
+    font-size: small;
+    color: rgb(151, 149, 149);
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.content {
+    height: 37vh;
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 10px;
+    overflow-y: auto;
+    /* Hide scrollbar by default */
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: transparent transparent;
+    /* Firefox */
+    transition: 0.3s ease-out;
+
+    /* WebKit (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 19px;
+    }
+
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+.content:hover {
+    scrollbar-color: grey transparent;
+    /* Change the color to your preference */
+}
+
+/* WebKit (Chrome, Safari) */
+.content:hover::-webkit-scrollbar-thumb {
+    background-color: grey;
+    /* Change the color to your preference */
+}
+
+.content ul {
+    padding: 0px 12px;
+
+}
+
+
+
+
+
+/*
+.content ul li{
+    list-style-type: decimal;
+    gap: 34px;
+    padding: 12px 0px;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid rgb(144, 145, 144);
+    margin: 12px;
+    padding: 13px;
+    border-radius: 5px;
+    
+}
+*/
+.content ul li {
+    list-style-type: decimal;
+    gap: 20px;
+    padding: 12px 0px;
+    justify-content: space-between;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid rgb(144, 145, 144);
+    margin: 12px;
+    padding: 13px;
+    border-radius: 5px;
+
+}
+
+
+.songName{
+    width: 20vw;
+    height: 3vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: small;
+
+}
+
+.playBar {
+    bottom: 35px;
+    height: auto;
+    text-align: center;
+    position: sticky;
+    overflow: hidden;
+    background-color: rgb(14, 15, 14);
+    
+   
+
+}
+
+
+
+
+
+
+  }
+
+  @media only screen and (max-width: 390px) {
+
+    .left{
+        position: fixed;
+        top: 14vh;
+        left: -110%;
+        transition: all 2s;
+        z-index: 1;
+        width: 100%;
+        padding: 9px;
+        background-color: #0d0d0d;
+       }
+
+
+
+       .songName{
+        width: 25vw;
+        height: 3vh;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: small;
+    
+    }
+      
+
+
+
+  }
