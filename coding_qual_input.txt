@@ -298,3 +298,7 @@
 151 fact
 192 moment
 182 term
+
+ddu ddu du
+dd uu dd uu du
+dd u dd u du
