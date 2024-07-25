@@ -25,7 +25,7 @@ async function getSongs(folder) {
     let anchors = div.getElementsByTagName("a");
     songs = Array.from(anchors)
         .filter(anchor => anchor.href.endsWith(".mp3"))
-        .map(anchor => anchor.href.split(`/${folder}/`)[1]);
+        .map(anchor => anchor.href.split(`${folder}/`)[1]);
 
     let songUL = document.querySelector(".content ul");
     songUL.innerHTML = songs.map(song => `
