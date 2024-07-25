@@ -18,7 +18,6 @@ function secondsToMinutesSeconds(seconds) {
 // Fetch songs from the specified folder
 async function getSongs(folder) {
     currFolder = folder;
-console.log(`Fetching songs from folder: ${folder}`); // Log folder value
 
     let response = await fetch(`${folder}/`);
     let html = await response.text();
