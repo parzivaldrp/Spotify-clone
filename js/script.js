@@ -179,4 +179,6 @@ async function main() {
     });
 }
 
+console.log(songs);
+
 main();
