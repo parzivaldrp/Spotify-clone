@@ -20,14 +20,14 @@ async function getSongs(folder) {
     currFolder = folder;
 console.log(`Fetching songs from folder: ${folder}`); // Log folder value
 
-    let response = await fetch(`Spotify-clone/songs/${folder}/`);
+    let response = await fetch(`${folder}/`);
     let html = await response.text();
     let div = document.createElement("div");
     div.innerHTML = html;
     let anchors = div.getElementsByTagName("a");
     songs = Array.from(anchors)
         .filter(anchor => anchor.href.endsWith(".mp3"))
-        .map(anchor => anchor.href.split(`Spotify-clone/songs/${folder}/`)[1]);
+        .map(anchor => anchor.href.split(`${folder}/`)[1]);
 
     let songUL = document.querySelector(".content ul");
     songUL.innerHTML = songs.map(song => `
@@ -75,7 +75,7 @@ async function displayAlbums() {
         if (anchor.href.includes("/songs")) {
             let folder = anchor.href.split("/").slice(-1)[0];
             try {
-                let response = await fetch(`songs/${folder}/info.json`);
+                let response = await fetch(`${folder}/info.json`);
                 let albumInfo = await response.json();
 
                 cardContainer.innerHTML += `
