@@ -19,14 +19,14 @@ function secondsToMinutesSeconds(seconds) {
 async function getSongs(folder) {
     currFolder = folder;
 
-    let response = await fetch(`songs/${folder}/`);
+    let response = await fetch(`/${folder}/`);
     let html = await response.text();
     let div = document.createElement("div");
     div.innerHTML = html;
     let anchors = div.getElementsByTagName("a");
     songs = Array.from(anchors)
         .filter(anchor => anchor.href.endsWith(".mp3"))
-        .map(anchor => anchor.href.split(`${folder}/`)[1]);
+        .map(anchor => anchor.href.split(`/${folder}/`)[1]);
 
     let songUL = document.querySelector(".content ul");
     songUL.innerHTML = songs.map(song => `
@@ -65,7 +65,7 @@ const playMusic = (track, pause = false) => {
 // Fetch and display albums
 async function displayAlbums() {
     console.log("display albums");
-    let response = await fetch(`songs/`);
+    let response = await fetch(`/songs/`);
     let html = await response.text();
     let div = document.createElement("div");
     div.innerHTML = html;
@@ -76,7 +76,7 @@ async function displayAlbums() {
         if (anchor.href.includes("/songs")) {
             let folder = anchor.href.split("/").slice(-1)[0];
             try {
-                let response = await fetch(`songs/${folder}/info.json`);
+                let response = await fetch(`/songs/${folder}/info.json`);
                 let albumInfo = await response.json();
 
                 cardContainer.innerHTML += `
