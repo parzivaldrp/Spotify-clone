@@ -49,7 +49,9 @@ async function getSongs(folder) {
 
 // Play the specified track
 const playMusic = (track, pause = false) => {
-    currentSong.src = `/${currFolder}/${track}`;
+s
+    const url = new URL(`/songs/${currFolder}/${track}` , window.location.origin);
+    currentSong.src = url.href;
     if (!pause) {
         currentSong.play();
         play.src = "svgs/pause.svg";
