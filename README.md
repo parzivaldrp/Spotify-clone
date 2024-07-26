@@ -1,0 +1,1 @@
+This is a simple Spotify clone built using HTML, CSS, and JavaScript. The website dynamically renders songs and albums from a structured folder system. Each artist has a dedicated folder containing their songs, cover images, and an info.json file with titles and descriptions. The design is responsive, ensuring a seamless experience across different devices.
