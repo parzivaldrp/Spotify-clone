@@ -1,4 +1,12 @@
 {
     "title": " Arijit Singh",
-    "description": "Best of Arijit."
+    "description": "Best of Arijit.",
+    "cover" : "songcover1.jpeg",
+    "songs": [
+        "Tera Chehra Adnan Sami 128 Kbps.mp3",
+        "Tera Chehra Jab Nazar Aaye adnan(PagalWorld) 128 Kbps.mp3",
+        "Tera Hone Laga Hoon Ajab Prem Ki Ghazab Kahani 128 Kbps.mp3"
+        
+    ]
+
 }

@@ -73,7 +73,7 @@ async function displayAlbums() {
         if (anchor.href.includes("/songs")) {
             let folder = anchor.href.split("/").slice(-1)[0];
 
-                        if (!folder || folder.toLowerCase() === "songs") continue;
+            if (!folder || folder.toLowerCase() === "songs") continue;
 
             try {
                 let response = await fetch(`/songs/${folder}/info.json`);
