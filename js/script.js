@@ -47,35 +47,7 @@ songs = await response.json();
     catch (err){
         console.error(`Could not fetch songs from ${folder}/tracks.json`, err);
     }
-  /*  
-    let response = await fetch(`./songs/${folder}/`);
-    let html = await response.text();
-    let div = document.createElement("div");
-    div.innerHTML = html;
-    let anchors = div.getElementsByTagName("a");
-    songs = Array.from(anchors)
-        .filter(anchor => anchor.href.endsWith(".mp3"))
-        .map(anchor => anchor.href.split(`/${folder}/`)[1]);
-
-    let songUL = document.querySelector(".content ul");
-    songUL.innerHTML = songs.map(song => `
-        <li>
-            <img src="svgs/music.svg" alt="">
-            <div class="info">
-                <div>${decodeURIComponent(song).replaceAll("%20", " ")}</div>
-            </div>
-            <img src="svgs/play.svg" alt="">
-        </li>`).join('');
-
-    Array.from(songUL.getElementsByTagName("li")).forEach(e => {
-        e.addEventListener("click", element => {
-            playMusic(e.querySelector(".info").textContent.trim());
-        });
-    });
-
-    document.querySelector(".songFolderName").textContent = decodeURIComponent(folder.split("/").pop());
-
-    */
+ 
 }
 
 // Play the specified track
